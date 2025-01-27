@@ -1,0 +1,16 @@
+/* Responsive styles */
+@media (max-width: 768px) {
+    .team_container .box {
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    .team_container .box .img-box img {
+        width: 80%;
+    }
+}

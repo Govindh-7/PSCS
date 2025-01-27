@@ -1,0 +1,161 @@
+/* App.css */
+
+/* Ensure body and html take up full height */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Main App container */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+/* Content area */
+.content {
+  flex: 1; /* Pushes footer to the bottom */
+}
+
+/* General footer styling */
+.info_section {
+  background-color: #1a1a1d; /* Dark background */
+  color: #f1f1f1; /* Light text */
+  padding: 60px 0; /* Padding around footer */
+  text-align: center;
+}
+
+.info_section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Info Col */
+.info_col {
+  margin-bottom: 30px;
+}
+
+.info_contact {
+  margin-bottom: 20px;
+}
+
+.info_contact h4 {
+  font-size: 18px;
+  color: #f7c08a; /* Gold color for heading */
+  margin-bottom: 15px;
+}
+
+.info_contact .contact_link_box a {
+  display: block;
+  color: #f1f1f1;
+  font-size: 14px;
+  margin: 10px 0;
+  text-decoration: none;
+}
+
+.info_contact .contact_link_box a:hover {
+  color: #f7c08a; /* Change color on hover */
+}
+
+.info_social a {
+  color: #f1f1f1;
+  font-size: 20px;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.info_social a:hover {
+  color: #f7c08a; /* Change color on hover */
+}
+
+/* Info Detail */
+.info_detail {
+  margin-bottom: 20px;
+}
+
+.info_detail h4 {
+  font-size: 18px;
+  color: #f7c08a;
+}
+
+.info_detail p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Links Section */
+.info_link_box {
+  margin-bottom: 20px;
+}
+
+.info_link_box h4 {
+  font-size: 18px;
+  color: #f7c08a;
+  margin-bottom: 15px;
+}
+
+.info_link_box .info_links a {
+  display: block;
+  color: #f1f1f1;
+  font-size: 14px;
+  margin: 10px 0;
+  text-decoration: none;
+}
+
+.info_link_box .info_links a:hover {
+  color: #f7c08a;
+}
+
+/* Subscribe Section */
+.info_col form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info_col form input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 5px;
+}
+
+.info_col form button {
+  padding: 10px;
+  background-color: #f7c08a;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+}
+
+.info_col form button:hover {
+  background-color: #e5a64d;
+}
+
+/* Bottom section */
+.footer-bottom {
+  background-color: #111;
+  padding: 10px 0;
+  color: #aaa;
+  font-size: 12px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .info_section .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .info_col {
+    margin-bottom: 20px;
+  }
+}
+

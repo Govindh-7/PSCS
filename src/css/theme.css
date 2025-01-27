@@ -1,0 +1,28 @@
+/* theme.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Light gray background */
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #333; /* Dark text */
+  }
+  
+ 
+  
+  .navbar .nav-link {
+    color: white !important;
+    font-weight: bold;
+  }
+  
+  .navbar .nav-link:hover {
+    color: #ffc107 !important; /* Gold hover */
+  }
+  
+  footer {
+    background-color: #343a40; /* Dark footer */
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
