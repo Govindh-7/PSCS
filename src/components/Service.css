@@ -1,0 +1,25 @@
+/* service.css */
+
+.service_section {
+    padding: 60px 0;
+}
+
+.service_section .heading_container {
+    margin-bottom: 40px;
+}
+
+.service_section .box {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.service_section .box:hover {
+    transform: scale(1.05);
+}
+
+.service_section .img-box img {
+    width: 100%;
+    height: auto;
+}

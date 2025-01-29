@@ -1,4 +1,5 @@
 import React from 'react';
+import '../css/WhyUs.css';
 
 const WhyUs = () => {
   return (

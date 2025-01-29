@@ -48,12 +48,24 @@ function App() {
 // Home Page Component
 const Home = () => {
   return (
-    <div>
+    <div className="main-container">
       <HeroSection />
-      <Service />
-      <TeamPage />
-      <WhyUs />
-      <About />
+      
+      <div className="section-wrapper">
+        <Service />
+      </div>
+
+      <div className="section-wrapper">
+        <About />
+      </div>
+
+      <div className="section-wrapper">
+        <TeamPage />
+      </div>
+
+      <div className="section-wrapper">
+        <WhyUs />
+      </div>
     </div>
   );
 }

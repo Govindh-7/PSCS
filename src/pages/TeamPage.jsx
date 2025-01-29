@@ -1,5 +1,5 @@
 import React from 'react';
-import './TeamPage.css'; // Assuming you have this CSS file for styling
+import '../css/TeamPage.css'; // Assuming you have this CSS file for styling
 
 const TeamPage = () => {
   return (

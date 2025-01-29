@@ -1,45 +1,58 @@
 import React from 'react';
+import { Carousel } from 'react-bootstrap'; // Import Carousel from react-bootstrap
+import img1 from '../images/img1.png';
+import './HeroSection.css';
 
 function HeroSection() {
   return (
-    <div className="hero_area">
-      <div className="hero_bg_box">
-        <div className="bg_img_box">
-          <img src="images/hero-bg.png" alt="" />
-        </div>
-      </div>
-      <section className="slider_section">
-        <div id="customCarousel1" className="carousel slide" data-ride="carousel">
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <div className="container">
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="detail-box">
-                      <h1>PSCS <br /> Pandey Software Consultancy Services Pvt.Ltd</h1>
-                      <p>Crafting Software for success</p>
-                      <div className="btn-box">
-                        <a href="" className="btn1">Read More</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="img-box">
-                      <img src="images/slider-img.png" alt="" />
-                    </div>
+    <div className="hero-area">
+      <Carousel controls={false} indicators={true} interval={5000}>
+        {/* Slide 1 */}
+        <Carousel.Item>
+          <div className="container">
+            <div className="row align-items-center">
+              <div className="col-md-6">
+                <div className="hero-content">
+                  <h1 className="animated fadeInUp">
+                    PSCS <br /> 
+                    <span className="company-name">Pandey Software Consultancy Services Pvt.Ltd</span>
+                  </h1>
+                  <p className="animated fadeInUp delay-1">Crafting Software for Success</p>
+                  <div className="cta-box animated fadeInUp delay-2">
+                    <button className="cta-btn">Read More</button>
                   </div>
                 </div>
               </div>
+              <div className="col-md-6">
+                <img src={img1} alt="Hero" className="hero-img animated fadeInRight" />
+              </div>
             </div>
-            {/* Add more carousel items as needed */}
           </div>
-          <ol className="carousel-indicators">
-            <li data-target="#customCarousel1" data-slide-to="0" className="active"></li>
-            <li data-target="#customCarousel1" data-slide-to="1"></li>
-            <li data-target="#customCarousel1" data-slide-to="2"></li>
-          </ol>
-        </div>
-      </section>
+        </Carousel.Item>
+
+        {/* Slide 2 */}
+        <Carousel.Item>
+          <div className="container">
+            <div className="row align-items-center">
+              <div className="col-md-6">
+                <div className="hero-content">
+                  <h1 className="animated fadeInUp">
+                    Innovative Solutions <br />
+                    <span className="company-name">For Digital Transformation</span>
+                  </h1>
+                  <p className="animated fadeInUp delay-1">Building Future-Ready Software</p>
+                  <div className="cta-box animated fadeInUp delay-2">
+                    <button className="cta-btn">Our Services</button>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-6">
+                <img src={img1} alt="Innovation" className="hero-img animated fadeInRight" />
+              </div>
+            </div>
+          </div>
+        </Carousel.Item>
+      </Carousel>
     </div>
   );
 }

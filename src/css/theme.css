@@ -1,28 +1,280 @@
-/* theme.css */
+/* src/css/theme.css */
+:root {
+  /* Orange Color Palette */
+  --primary-orange: #FF6B35;
+  --secondary-orange: #FF9E35;
+  --accent-orange: #FFB347;
+  --dark-orange: #D15600;
+  --light-orange: #FFF3E0;
+  --text-dark: #2D2D2D;
+  --text-light: #FFFFFF;
+}
+
+:root {
+  --primary-orange: #FF6B35;
+  --secondary-orange: #FF9E35;
+  --dark-orange: #D15600;
+}
+
+/* Common Styles */
+.layout_padding {
+  padding: 60px 0;
+}
+
+.heading_container.heading_center {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.heading_container h2 {
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.heading_container h2 span {
+  color: var(--primary-orange);
+}
+
+/* About Section */
+.about_section .row {
+  align-items: center;
+}
+
+.about_section .img-box img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.about_section .detail-box h3 {
+  color: var(--dark-orange);
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.about_section .detail-box p {
+  color: var(--text-dark);
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.about_section .detail-box a {
+  color: var(--primary-orange);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s;
+}
+
+.about_section .detail-box a:hover {
+  border-color: var(--primary-orange);
+}
+
+/* Services Section */
+.service_section {
+  background: var(--light-orange);
+}
+
+.service_section .box {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+}
+
+.service_section .box:hover {
+  transform: translateY(-10px);
+  border-color: var(--primary-orange);
+  box-shadow: 0 10px 30px rgba(255,107,53,0.1);
+}
+
+.service_section .img-box {
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.service_section .img-box img {
+  height: 100%;
+  width: auto;
+}
+
+.service_section h5 {
+  color: var(--dark-orange);
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.service_section .btn-box a {
+  display: inline-block;
+  padding: 10px 35px;
+  background: var(--primary-orange);
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.service_section .btn-box a:hover {
+  background: var(--dark-orange);
+}
+
+/* Team Section */
+.team_section {
+  background: white;
+}
+
+.team_section .box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.team_section .box:hover {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.team_section .img-box img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.team_section .detail-box {
+  padding: 20px;
+  text-align: center;
+}
+
+.team_section .detail-box h5 {
+  color: var(--dark-orange);
+  margin-bottom: 5px;
+}
+
+.team_section .detail-box p {
+  color: var(--text-dark);
+  font-style: italic;
+}
+
+.team_section .social_box {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  background: rgba(255,107,53,0.9);
+  padding: 10px;
+  transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.team_section .box:hover .social_box {
+  bottom: 0;
+}
+
+.team_section .social_box a {
+  color: white;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+.team_section .social_box a:hover {
+  transform: translateY(-3px);
+}
+
+/* Why Us Section */
+.why_section .box {
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+}
+
+.why_section .box:hover {
+  border-color: var(--primary-orange);
+  transform: translateY(-5px);
+}
+
+.why_section .img-box {
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.why_section .img-box img {
+  height: 100%;
+  width: auto;
+}
+
+.why_section h5 {
+  color: var(--dark-orange);
+  margin-bottom: 15px;
+}
+
+/* Add to theme.css */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add this class to any element needing entrance animation */
+.fade-in-up {
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa; /* Light gray background */
+  background: var(--light-orange) !important;
+}
+
+/* Create section wrapper */
+.section-wrapper {
+  background: white;
+  margin: 30px 0;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(255, 107, 53, 0.05);
+  padding: 40px 0;
+}
+
+@keyframes sectionEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-wrapper {
+  animation: sectionEntrance 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 0.3s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .layout_padding {
+    padding: 40px 0;
   }
   
-  h1, h2, h3, h4, h5, h6 {
-    color: #333; /* Dark text */
+  .heading_container h2 {
+    font-size: 28px;
   }
   
- 
-  
-  .navbar .nav-link {
-    color: white !important;
-    font-weight: bold;
+  .service_section .box,
+  .why_section .box {
+    margin-bottom: 20px;
   }
-  
-  .navbar .nav-link:hover {
-    color: #ffc107 !important; /* Gold hover */
-  }
-  
-  footer {
-    background-color: #343a40; /* Dark footer */
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
-  
+}

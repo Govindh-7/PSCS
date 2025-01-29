@@ -1,0 +1,92 @@
+/* src/css/Service.css */
+.service_section {
+    background: var(--light-orange);
+  }
+  
+  .service_section .box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+  }
+  
+  .service_section .box:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-orange);
+    box-shadow: 0 10px 30px rgba(255,107,53,0.1);
+  }
+  
+  .service_section .img-box {
+    height: 80px;
+    margin-bottom: 20px;
+  }
+  
+  .service_section .img-box img {
+    height: 100%;
+    width: auto;
+  }
+  
+  .service_section h5 {
+    color: var(--dark-orange);
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .service_section .btn-box a {
+    display: inline-block;
+    padding: 10px 35px;
+    background: var(--primary-orange);
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  
+  .service_section .btn-box a:hover {
+    background: var(--dark-orange);
+  }
+
+  .service_section .box {
+    background: white;
+    box-shadow: 0 5px 25px rgba(255, 107, 53, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .service_section .box:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(255, 107, 53, 0.2);
+  }
+  
+  .service_section .box {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+  }
+
+  /* Add entrance animation */
+  @keyframes serviceEntrance {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .service_section .box {
+    animation: serviceEntrance 0.6s ease forwards;
+    opacity: 0;
+  }
+  
+  .service_section .box:nth-child(1) { animation-delay: 0.2s; }
+  .service_section .box:nth-child(2) { animation-delay: 0.4s; }
+  .service_section .box:nth-child(3) { animation-delay: 0.6s; }
+  
+  @media (max-width: 768px) {
+    .service_section .box {
+      margin-bottom: 20px;
+    }
+  }

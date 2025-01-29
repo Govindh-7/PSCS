@@ -1,0 +1,193 @@
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Color Palette */
+:root {
+  --primary-color: #2A2D34;
+  --secondary-color: #009DDC;
+  --accent-color: #F26430;
+  --light-text: #F8F7F9;
+  --dark-text: #2A2D34;
+}
+
+/* Base Styling */
+.hero-area {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, var(--primary-color), #1a1d24);
+  color: var(--light-text);
+  padding: 100px 0;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+/* Carousel Customization */
+.carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.5);
+  margin: 0 8px;
+  border: none;
+}
+
+.carousel-indicators .active {
+  background-color: var(--accent-color);
+}
+
+/* Content Styling */
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+.company-name {
+  font-weight: 300;
+  font-size: 2.2rem;
+  display: block;
+  margin-top: 15px;
+  color: var(--secondary-color);
+}
+
+.hero-content p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-bottom: 35px;
+  opacity: 0.9;
+}
+
+/* Image Styling */
+.hero-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.3);
+  transform: perspective(1500px) rotateY(15deg);
+  transition: transform 1s ease 0s;
+}
+
+.hero-img:hover {
+  transform: perspective(3000px) rotateY(5deg);
+}
+
+/* Button Styling */
+.cta-btn {
+  background: var(--accent-color);
+  color: var(--light-text);
+  padding: 15px 40px;
+  border-radius: 30px;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-btn:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.3),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.cta-btn:hover:before {
+  left: 100%;
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(242,100,48,0.3);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+.fadeInRight {
+  animation-name: fadeInRight;
+}
+
+.delay-1 {
+  animation-delay: 0.3s;
+}
+
+.delay-2 {
+  animation-delay: 0.6s;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .company-name {
+    font-size: 1.8rem;
+  }
+  
+  .hero-img {
+    margin-top: 50px;
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-area {
+    padding: 80px 0;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .company-name {
+    font-size: 1.4rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+}
